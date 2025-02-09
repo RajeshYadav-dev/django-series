@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>facebook</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
   </head>
   <body>
-    <h1> Welcome to facebook</h1>
+    <h1>Welcome to facebook</h1>
+    {% comment %} {{name}} {% endcomment %}
+    <p>Uppercase: {{ name|upper }}</p>
+    <!-- Converts text to uppercase -->
+    <p>Default Value: {{ age|default:"Not Available" }}</p>
+    <!-- Provides a default value -->
+
+    {% if name %}
+    <p>Welcome, {{ name }}!</p>
+    {% else %}
+    <p>Name is empty.</p>
+    {% endif %}
   </body>
 </html>

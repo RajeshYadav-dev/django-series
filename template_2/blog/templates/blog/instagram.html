@@ -10,5 +10,16 @@
   </head>
   <body>
     <h1>Welcome to instagram</h1>
+    {{details}}
+    <ul>
+      {% for key,value in details.items %}
+      <li>{{ key }} = {{value}}</li>
+      {% endfor %}
+    </ul>
+
+    {{desc.desc|truncatewords:3}}<br />
+    {{desc.desc|upper|truncatewords:3}}<br />
+    {{desc.desc|length}}<br />
+    {{desc.desc|slice:"0:5"}}
   </body>
 </html>
